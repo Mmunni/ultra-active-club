@@ -1,0 +1,29 @@
+.container{
+    width: 1140px;
+    margin: 0 auto;
+}
+.club{
+   display: grid;
+   grid-template-columns: 3fr 1fr;
+}
+
+.club-title {
+    padding-top: 40px;
+  }
+.club-title h1 {
+    color: #5757f7;
+  }
+  .club-title p {
+    padding: 20px 0;
+    font-size: 17px;
+  }
+ 
+.club-items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.club-timming {
+	background-color: #7fffd4;
+	margin-left: 15px;
+}
