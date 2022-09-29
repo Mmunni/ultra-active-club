@@ -23,7 +23,7 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
-.club-timming {
-	background-color: #7fffd4;
+.club-right-side {
+	background-color: #fff;
 	margin-left: 15px;
 }

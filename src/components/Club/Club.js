@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ClubDetails from '../ClubDetails/ClubDetails';
+import ClubRightSide from '../ClubRightSide/ClubRightSide';
 import "./Club.css"
 
 const Club = () => {
@@ -27,8 +28,8 @@ const Club = () => {
                     }
                     </div>
                  </div>
-                  <div className="club-timming">
-                     <h1>hi</h1>
+                  <div className="club-right-side">
+                     <ClubRightSide></ClubRightSide>
                     </div>
                 </div>
             </div>
