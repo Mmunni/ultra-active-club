@@ -37,14 +37,16 @@
 	justify-content: space-evenly;
 	background-color: #ddd;
 	border-radius: 10px;
+	padding: 10px 0;
 }
-  .single-break-item p {
+  .single-break-item button {
 	background-color: #fff;
 	padding: 6px;
 	border-radius: 50%;
 	cursor: pointer;
+	border: none;
 }
-.single-break-item p:hover{
+.single-break-item button:hover{
 	background-color: #5757f7;
 	color: #fff;
 }
