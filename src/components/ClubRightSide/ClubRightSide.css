@@ -1,7 +1,35 @@
 
 .right-side-container {
-	padding-left: 10px;
+	padding: 0 10px;
 	position: sticky;
 	top: 0;
-	padding-top: 5px;
+	padding-top: 20px;
 }
+.user-img {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+.user-img img {
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+}
+.user-info {
+	display: flex;
+  }
+
+  .user-details {
+	margin-left: 10px;
+  }
+  .user-details h3 {
+	margin-bottom: -15px;
+  }
+  .user-details p{
+	color:#808080;
+	font-size: 15px;
+  }
+  .exercice-details-area {
+	margin-top: 50px;
+}
+

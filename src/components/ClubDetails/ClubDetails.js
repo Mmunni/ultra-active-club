@@ -2,9 +2,9 @@ import React from 'react';
 import "./ClubDetails.css"
 
 const ClubDetails = (props) => {
-    // console.log(props)
+    const {totalTime} = props
     const {picture, name, about, age, time} = props.item;
-    // console.log(props.item)
+       
     return (
         <div>
             <div className="card">
@@ -14,7 +14,7 @@ const ClubDetails = (props) => {
                 <p>{about}</p>
                 <p className='age'>For Age: {age}</p>
                 <p className='time-required'>Time Requried: {time}</p>
-                <button className='btn'>Add To List</button>
+                <button onClick={() => {totalTime(props.time)}}  className='btn'>Add To List</button>
                 </div>
             </div>
         </div>

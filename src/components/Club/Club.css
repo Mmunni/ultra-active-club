@@ -27,3 +27,51 @@
 	background-color: #fff;
 	margin-left: 15px;
 }
+/* Medium Layout: 1280px. */
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .container{
+      width: 970px;
+  }
+  .club{
+    grid-template-columns: 3fr 1fr;
+ }
+
+}
+
+
+/* Tablet Layout: 768px. */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .container{
+      width: 750px;
+  }
+  .club{
+    grid-template-columns: 2fr 1fr;
+ }
+ .club-items{
+  grid-template-columns: repeat(2, 1fr);
+}
+ 
+}
+
+/* Mobile Layout: 320px. */
+
+@media only screen and (max-width: 767px) {
+  .container{
+      width: 350px;
+   }
+   .club{
+    grid-template-columns: 1fr;
+ }
+ .club-items{
+  grid-template-columns: 1fr;
+  margin-bottom: 20px;
+}
+.club-right-side {
+	background-color: #fff;
+	margin-left: 0;
+  width: 300px;
+}
+
+}
