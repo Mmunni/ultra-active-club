@@ -5,7 +5,7 @@
     "name": "Barbell",
     "about": "A barbell is a piece of exercise equipment used in weight training. \r\n",
     "age": "20-25",
-    "time": "30s"
+    "time": 30
   },
   {
     "_id": "6335269641a74bc3461bd2f1",
@@ -13,7 +13,7 @@
     "name": "Treadmill",
     "about": "Treadmill working is an aerobic cardio exercise.\r\n",
     "age": "21-29",
-    "time": "40s"
+    "time": 40
 
   },
   {
@@ -22,7 +22,7 @@
     "name": "Dummbel",
     "about": "The dumbbell, a type of free weight, is a piece of equipment used in weight training.\r\n",
     "age": "20-30",
-    "time": "40s"
+    "time": 45
   },
   {
     "_id": "63352696429ce3b482319b0b",
@@ -30,7 +30,7 @@
     "name":"Cross Traninner",
     "about": "It's all about teamwork: pushing on the pedals works your thighs, glutes and calves.\r\n",
     "age": "19-30",
-    "time": "25s"
+    "time": 25
   },
   {
     "_id": "63352696fa87991a54b59923",
@@ -38,7 +38,7 @@
     "name":"Dipping Bars",
     "about": "The pectoralis major muscle of the chest is the primary muscle that is worked during parallel bar dips.\r\n",
     "age": "20-27",
-    "time": "30s"
+    "time": 35
   },
   {
     "_id": "633526967dea57829efb207b",
@@ -46,6 +46,6 @@
     "name":"Power Tower",
     "about": "A power tower, or a knee raise station, is a piece of exercise equipment.\r\n",
     "age": "20-32",
-    "time": "25s"
+    "time": 25
   }
 ]

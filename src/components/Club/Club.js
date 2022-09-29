@@ -8,13 +8,18 @@ import "./Club.css"
 
 const Club = () => {
     const [items, setItems] = useState([]);
+    const [time, setTime] = useState([]);
     useEffect( () => {
         fetch('products.json')
         .then(res => res.json())
         .then(data => setItems(data))
-    }, [])
-    const totalTime = (time) => {
-        console.log('clicked')
+    }, []);
+
+    const handelBtn = (item) => {
+        // console.log(item)
+        const newTime = [...time, item]
+        setTime(newTime)
+         
     }
     return (
         <div>
@@ -30,7 +35,7 @@ const Club = () => {
                     {
                         items.map(item => <ClubDetails key = {item._id}
                         item = {item}
-                        totalTime ={totalTime}
+                        handelBtn ={handelBtn}
                         ></ClubDetails>)
                     }
                     </div>
@@ -39,7 +44,7 @@ const Club = () => {
                     </div>
                  </div>
                   <div className="club-right-side">
-                     <ClubRightSide></ClubRightSide>
+                       <ClubRightSide time={time}></ClubRightSide> 
                     </div>
                 </div>
             </div>
