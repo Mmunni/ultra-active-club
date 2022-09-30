@@ -6,19 +6,24 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 const ClubRightSide = ({time}) => {
+    
    const [brk = 0, setBrk] = useState([])
   
    let totalTime = 0;
+  
 
    for(const times of time){
-    totalTime = totalTime + times.time;
+     
+    totalTime = totalTime + times.time ;
    }
-   
+//    toast
    const notify = ()=>{
- 
+
     // Calling toast method by passing string
     toast('Complited', {position: toast.POSITION.TOP_CENTER})
 }
+
+// break btn function
 const addTime = () => {
     const second = document.getElementById('btn1').innerText;
 
@@ -68,6 +73,7 @@ const addTime50 = () => {
                     <p>Sylhet, Bangladesh</p>
                 </div>
             </div>
+            {/* break area */}
             <div className="break-area">
             <h3>Add A Break</h3>
                 <div className="break-items">
@@ -88,6 +94,7 @@ const addTime50 = () => {
                     </div>
                 </div>
             </div>
+            {/* tore time abd break area */}
             <div className="exercice-details-area">
             <h3>Exercise Details</h3>
             <div className="exercise-details">
