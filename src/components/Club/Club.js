@@ -5,6 +5,7 @@ import ClubDetails from '../ClubDetails/ClubDetails';
 import ClubRightSide from '../ClubRightSide/ClubRightSide';
 import Question from '../Question/Question';
 import "./Club.css"
+import { addToDb } from '../../utilities/fakedb';
 
 const Club = () => {
     const [items, setItems] = useState([]);
@@ -19,6 +20,8 @@ const Club = () => {
         // console.log(item)
         const newTime = [...time, item]
         setTime(newTime)
+        addToDb(item.id)
+        
          
     }
     return (
@@ -33,7 +36,7 @@ const Club = () => {
                   </div>
                     <div className="club-items">
                     {
-                        items.map(item => <ClubDetails key = {item._id}
+                        items.map(item => <ClubDetails key = {item.id}
                         item = {item}
                         handelBtn ={handelBtn}
                         ></ClubDetails>)
