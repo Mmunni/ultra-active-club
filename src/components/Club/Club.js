@@ -5,7 +5,7 @@ import ClubDetails from '../ClubDetails/ClubDetails';
 import ClubRightSide from '../ClubRightSide/ClubRightSide';
 import Question from '../Question/Question';
 import "./Club.css"
-import { addToDb } from '../../utilities/fakedb';
+import { addToDb, getStoredTime } from '../../utilities/fakedb';
 
 const Club = () => {
     const [items, setItems] = useState([]);
@@ -15,6 +15,20 @@ const Club = () => {
         .then(res => res.json())
         .then(data => setItems(data))
     }, []);
+
+    useEffect(() => {
+        const storedTime = getStoredTime();
+        const saveTime = [];
+        for(const id in storedTime){
+            const addedTime = items.find(item => item.id === id);
+            if(addedTime){
+                const qunatity = storedTime[id];
+                addedTime.qunatity = qunatity;
+                saveTime.push(addedTime)
+            }
+        }
+        setTime(saveTime);
+    }, [items]);
 
     const handelBtn = (item) => {
         // console.log(item)

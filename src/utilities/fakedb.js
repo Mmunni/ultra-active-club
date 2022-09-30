@@ -1,32 +1,43 @@
 // use local storage to manage cart data
 const addToDb = id =>{
-    let shoppingCart = {};
+    let totalTime = {};
 
     //get the shopping cart from local storage
-    const storedCart = localStorage.getItem('total-time');
-    if(storedCart){
-        shoppingCart = JSON.parse(storedCart);
+    const storedTime = localStorage.getItem('total-time');
+    if(storedTime){
+        totalTime = JSON.parse(storedTime);
     }
 
     // add quantity
-    const quantity = shoppingCart[id];
+    const quantity = totalTime[id];
     if(quantity){
         const newQuantity = quantity + 1;
-        shoppingCart[id] = newQuantity;
+        totalTime[id] = newQuantity;
     }
     else{
-        shoppingCart[id] = 1;
+        totalTime[id] = 1;
     }
-    localStorage.setItem('total-time', JSON.stringify(shoppingCart));
+    localStorage.setItem('total-time', JSON.stringify(totalTime));
 }
 
+const getStoredTime = () => {
+    let totalTime = {};
+
+    //get the shopping cart from local storage
+    const storedTime = localStorage.getItem('total-time');
+    if(storedTime){
+        totalTime = JSON.parse(storedTime);
+    }
+    return totalTime;
+
+}
 const removeFromDb = id =>{
-    const storedCart = localStorage.getItem('total-time');
-    if(storedCart){
-        const shoppingCart = JSON.parse(storedCart);
-        if(id in shoppingCart){
-            delete shoppingCart[id];
-            localStorage.setItem('total-time', JSON.stringify(shoppingCart));
+    const storedTime = localStorage.getItem('total-time');
+    if(storedTime){
+        const totalTime = JSON.parse(storedTime);
+        if(id in totalTime){
+            delete totalTime[id];
+            localStorage.setItem('total-time', JSON.stringify(totalTime));
         }
     }
 }
@@ -36,7 +47,8 @@ const deleteShoppingCart = () =>{
 }
 
 export {
-    addToDb, 
+    addToDb,
+    getStoredTime, 
     removeFromDb,
     deleteShoppingCart
 }
